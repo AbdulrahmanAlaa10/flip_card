@@ -1,0 +1,39 @@
+body {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.card {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.front,.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    position: absolute;
+}
+
+.front {
+    background-color: chartreuse;
+    z-index: 2;
+    backface-visibility: hidden;
+
+}
+.back {
+    background-color: rgb(210, 183, 30);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.contanier:hover .card {
+    transform: rotateY(180deg);
+}
